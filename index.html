@@ -1,106 +1,172 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Ian Tan's Homepage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-width=1.0">
+  <title>Ian Tan's Homepage</title>
   <style>
+    /* Minimalist Color Palette & Typography */
+    :root {
+      --text-main: #333333;
+      --text-muted: #666666;
+      --link-color: #0056b3;
+      --bg-color: #ffffff;
+    }
+
     body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-main);
+      background-color: var(--bg-color);
       margin: 0;
       padding: 0;
+      -webkit-font-smoothing: antialiased;
     }
-    .content {
-      max-width: 1000px;
-      padding: 20px;
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    /* Links */
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Typography */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin: 0 0 16px 0;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 40px 0 20px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    p {
+      margin: 0 0 16px 0;
+    }
+
+    /* Header Layout */
+    .header {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .profile-pic {
+      width: 250px;
+      height: auto;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .bio-links {
+      margin-top: 16px;
+      font-size: 0.95rem;
+    }
+
+    /* Publications List */
+    .pub-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pub-list li {
+      margin-bottom: 20px;
+    }
+
+    .pub-title {
+      font-weight: 500;
+      display: block;
+    }
+
+    .pub-meta {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Responsive adjustments for mobile devices */
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .profile-pic {
+        width: 100%;
+        max-width: 300px;
+      }
     }
   </style>
 </head>
+<body>
 
-<body bgcolor="#ffffff" link="#000080">
-<div class="content">
+  <div class="container">
+    <header class="header">
+      <img src="./Ian Tan's index_files/picture.jfif" alt="Ian Tan" class="profile-pic">
+      <div class="bio">
+        <h1>Ian Tan</h1>
+        <p>Welcome to my page. I am a postdoc in the research group of <a href="https://www.dominiksafranek.com/">Dominik Šafránek</a> at Charles University in Prague. I received my PhD in Mathematics in 2025 from Auburn University, where I was a student of <a href="https://webhome.auburn.edu/~lao0004/">Luke Oeding</a>. My research interests include quantum information theory, quantum error correcting codes, and entanglement.</p>
+	<p>If you are interested, check out my musical <a href="https://ian-tan.github.io/music">compositions</a>.</p>
+        
+        <div class="bio-links">
+          <a href="https://ian-tan.github.io/CV.pdf"><b>Curriculum Vitae</b></a>
+          <br>
+          <b>Email:</b> <a href="mailto:y-e.tan@matfyz.cuni.cz">y-e.tan@matfyz.cuni.cz</a>
+        </div>
+      </div>
+    </header>
 
-<div class="RightHeader">
-</div>
-  
-<div class="LeftHeader">
-<p>  
-</p><h1>Ian Tan</h1> 
-<img height="300" src="./Ian Tan&#39;s index_files/picture.jfif">
+    <section>
+      <h2>Publications & Preprints</h2>
+      <ul class="pub-list">
+        <li>
+          <a href="https://arxiv.org/abs/2507.02185" class="pub-title">Classification of five-qubit absolutely maximally entangled states</a>
+          <div class="pub-meta">Preprint.</div>
+        </li>
+        
+        <li>
+          <a href="https://arxiv.org/abs/2601.19677v2" class="pub-title">Transversal gates of the ((3,3,2)) qutrit code and local symmetries of the absolutely maximally entangled state of four qutrits</a>
+          <div class="pub-meta">Preprint.</div>
+        </li>
 
-<p></p>
-Welcome to my page. I am a postdoc in the research group of <a href="https://www.dominiksafranek.com/">Dominik Šafránek</a> at Charles University in Prague. I received my PhD in Mathematics in 2025 from Auburn University, where I was a student of <a href="http://lukeoeding.com/">Luke Oeding</a>. My research interests include quantum information theory, quantum error correcting codes, and entanglement. Here's my <a href="https://ian-tan.github.io/CV.pdf"><b> CV </b></a>.
-<br>
-<br>
-If you are interested, check out my musical <a href="https://ian-tan.github.io/music">compositions</a>.
-<br>
-<br>
-<b>Email:</b> y-e.tan@matfyz.cuni.cz
-<br>
+        <li>
+          <a href="https://math.colgate.edu/~integers/aa40/aa40.pdf" class="pub-title">Fast Winning Strategies in a Generalized van der Waerden Game</a>
+          <div class="pub-meta">with Hannah Alpert, Liam Barham, Brian Freidin, and Alexandra Weiner &mdash; Integers (2026).</div>
+        </li>
 
-<!--
-<br>
-<b>Teaching resources:</b> You can find here some <a href="https://ian-tan.github.io/teaching_animations">animations</a> I've made over the years on desmos.com, mostly for pedagogical purposes.
--->
+        <li>
+          <a href="https://iopscience.iop.org/article/10.1088/1751-8121/ade410/meta" class="pub-title">Four-qubit critical states</a>
+          <div class="pub-meta">with Luke Oeding &mdash; Journal of Physics A: Mathematical and Theoretical (2025).</div>
+        </li>
 
-</div>
- <br>
-<b>Publications/Preprints:</b> 
-<br>
-<br>
+        <li>
+          <a href="https://arxiv.org/abs/2402.12542" class="pub-title">Tensor decompositions with applications to LU and SLOCC equivalence of multipartite pure states</a>
+          <div class="pub-meta">with Luke Oeding &mdash; SIAM Journal on Applied Algebra and Geometry (2025).<br>
+          <a href="https://www.youtube.com/watch?v=6wg2-TNpSvo">Recording of related talk</a> at UGA Algebra Seminar available on YouTube.</div>
+        </li>
 
-<ul>
-<li>
-<a href="https://arxiv.org/abs/2507.02185">Classification of five-qubit absolutely maximally entangled states</a>
-<ul>
-<li> Preprint. </li>
-</ul>
-</li>
-</ul>
+        <li>
+          <a href="https://scholar.rose-hulman.edu/rhumj/vol25/iss2/4/" class="pub-title">Counting rotational subsets of the circle</a>
+          <div class="pub-meta">Rose-Hulman Undergraduate Mathematics Journal (2024).</div>
+        </li>
+      </ul>
+    </section>
+  </div>
 
-<ul>
-<li>
-<a href="https://arxiv.org/abs/2601.19677v2">Transversal gates of the ((3,3,2)) qutrit code and local symmetries of the absolutely maximally entangled state of four qutrits</a>
-<ul>
-<li> Preprint. </li>
-</ul>
-</li>
-</ul>
-
-<ul>
-<li><a href="https://math.colgate.edu/~integers/aa40/aa40.pdf">Fast Winning Strategies in a Generalized van der Waerden Game</a> (with
- Hannah Alpert, Liam Barham, Brian Freidin, and Alexandra Weiner)
-<ul>
-<li> Integers (2026). </li>
-</ul>
-</li>
-</ul>
-
-<ul>
-<li>
-<a href="https://iopscience.iop.org/article/10.1088/1751-8121/ade410/meta">Four-qubit critical states</a> (with Luke Oeding)
-<ul>
-<li> Journal of Physics A: Mathematical and Theoretical (2025). </li>
-</ul>
-</li>
-</ul>
-
-<ul>
-<li><a href="https://arxiv.org/abs/2402.12542">
-Tensor decompositions with applications to LU and SLOCC equivalence of multipartite pure states</a> (with
- Luke Oeding)
-<ul>
-<li> SIAM Journal on Applied Algebra and Geometry (2025). </li>
-  <li>Recording of related talk at UGA Algebra Seminar available on <a href="https://www.youtube.com/watch?v=6wg2-TNpSvo">YouTube</a>.</li>
-</ul>
-</li>
-</ul>
-
-<ul>
-<li><a href="https://scholar.rose-hulman.edu/rhumj/vol25/iss2/4/">
-Counting rotational subsets of the circle</a>
-<ul>
-<li> Rose-Hulman Undergraduate Mathematics Journal (2024). </li>
-</ul>
-</li>
-</ul>
-
-<br>
-</div></body></html>
+</body>
+</html>
