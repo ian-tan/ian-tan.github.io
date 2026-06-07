@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-width=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ian Tan's Homepage</title>
   <style>
     /* Minimalist Color Palette & Typography */
@@ -66,11 +66,26 @@
       margin-bottom: 40px;
     }
 
+    /* Profile Figure and Image */
+    .profile-figure {
+      margin: 0; 
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
     .profile-pic {
       width: 250px;
       height: auto;
       border-radius: 4px;
       object-fit: cover;
+    }
+
+    .photo-credit {
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center; /* Centered the caption text */
     }
 
     .bio-links {
@@ -106,9 +121,14 @@
         gap: 20px;
       }
       
-      .profile-pic {
+      .profile-figure {
         width: 100%;
         max-width: 300px;
+        margin: 0 auto; /* Centers the whole figure element on mobile viewports */
+      }
+
+      .profile-pic {
+        width: 100%;
       }
     }
   </style>
@@ -117,11 +137,15 @@
 
   <div class="container">
     <header class="header">
-      <img src="./Ian Tan's index_files/picture.jfif" alt="Ian Tan" class="profile-pic">
+      <figure class="profile-figure">
+        <img src="./Ian Tan's index_files/picture.jfif" alt="Ian Tan" class="profile-pic">
+        <figcaption class="photo-credit">Photo by Megan Balut (2017)</figcaption>
+      </figure>
+
       <div class="bio">
         <h1>Ian Tan</h1>
         <p>Welcome to my page. I am a postdoc in the research group of <a href="https://www.dominiksafranek.com/">Dominik Šafránek</a> at Charles University in Prague. I received my PhD in Mathematics in 2025 from Auburn University, where I was a student of <a href="https://webhome.auburn.edu/~lao0004/">Luke Oeding</a>. My research interests include quantum information theory, quantum error correcting codes, and entanglement.</p>
-	<p>If you are interested, check out my musical <a href="https://ian-tan.github.io/music">compositions</a>.</p>
+        <p>If you are interested, check out my musical <a href="https://ian-tan.github.io/music">compositions</a>.</p>
         
         <div class="bio-links">
           <a href="https://ian-tan.github.io/CV.pdf"><b>Curriculum Vitae</b></a>
